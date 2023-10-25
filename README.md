@@ -56,15 +56,15 @@ Aqui está o diagrama de casos de uso do nosso Jogo de Xadrez:
 
 Aqui estão as principais classes para o xadrez:
 
-**Jogador:** A classe Jogador representa um dos participantes que jogam o jogo. Ela mantém o controle de qual lado (preto ou branco) o jogador está jogando.<br />
-**Conta:** Teremos dois tipos de contas no sistema: um será um jogador e o outro será um administrador.<br />
-**Jogo:** Esta classe controla o fluxo de um jogo. Ela mantém o controle de todos os movimentos do jogo, qual jogador tem a vez atual e o resultado final do jogo.<br />
-**Caixa:** Uma caixa representa um bloco da grade 8x8 e uma peça opcional.<br />
-**Tabuleiro:** O tabuleiro é um conjunto de caixas 8x8 contendo todas as peças de xadrez ativas.<br />
-**Peça:** O bloco de construção básico do sistema, cada peça será colocada em uma caixa. Esta classe contém a cor que a peça representa e o status da peça (ou seja, se a peça está atualmente em jogo ou não). Esta seria uma classe abstrata e todas as peças do jogo a estenderão.<br />
-**Movimento:** Representa um movimento no jogo, contendo a caixa de início e a caixa de destino. A classe Movimento também manterá o controle do jogador que fez o movimento, se for um movimento de roque, ou se o movimento resultou na captura de uma peça.<br />
-**ControladorDeJogo:** A classe Jogador usa o ControladorDeJogo para fazer movimentos.<br />
-**VisualizaçãoDeJogo:** A classe Jogo atualiza a VisualizaçãoDeJogo para mostrar as alterações aos jogadores.<br />
+* **Jogador:** A classe Jogador representa um dos participantes que jogam o jogo. Ela mantém o controle de qual lado (preto ou branco) o jogador está jogando.<br />
+* **Conta:** Teremos dois tipos de contas no sistema: um será um jogador e o outro será um administrador.<br />
+* **Jogo:** Esta classe controla o fluxo de um jogo. Ela mantém o controle de todos os movimentos do jogo, qual jogador tem a vez atual e o resultado final do jogo.<br />
+* **Caixa:** Uma caixa representa um bloco da grade 8x8 e uma peça opcional.<br />
+* **Tabuleiro:** O tabuleiro é um conjunto de caixas 8x8 contendo todas as peças de xadrez ativas.<br />
+* **Peça:** O bloco de construção básico do sistema, cada peça será colocada em uma caixa. Esta classe contém a cor que a peça representa e o status da peça (ou seja, se a peça está atualmente em jogo ou não). Esta seria uma classe abstrata e todas as peças do jogo a estenderão.<br />
+* **Movimento:** Representa um movimento no jogo, contendo a caixa de início e a caixa de destino. A classe Movimento também manterá o controle do jogador que fez o movimento, se for um movimento de roque, ou se o movimento resultou na captura de uma peça.<br />
+* **Controlador De Jogo:** A classe Jogador usa o ControladorDeJogo para fazer movimentos.<br />
+* **Visualização De Jogo:** A classe Jogo atualiza a VisualizaçãoDeJogo para mostrar as alterações aos jogadores.<br />
 
 <p align="center">
     <img src="/media-files/chess-class-diagram.png" alt="Chess Class Diagram">
