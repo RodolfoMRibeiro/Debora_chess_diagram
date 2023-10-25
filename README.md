@@ -4,10 +4,10 @@
 **Nós iremos tratar o seguinte:**
 
 * [Requerimentos do Sistema](#Requerimentos-do-Sistema)
-* [Use Case Diagram](#use-case-diagram)
-* [Class Diagram](#class-diagram)
-* [Activity Diagram](#activity-diagram)
-* [Code](#code)
+* [Diagrama de Caso de Uso](#Diagrama-de-Caso-de-Uso)
+* [Diagrama de Classe](#Diagrama-de-Classe)
+* [Diagrama de Atividades](#Diagrama-de-Atividades)
+* [Codigo](#Codigo)
 
 O xadrez é um jogo de tabuleiro estratégico para dois jogadores jogado em um tabuleiro de xadrez, que é um tabuleiro quadriculado com 64 casas dispostas em uma grade de 8x8. Existem algumas versões de tipos de jogos que as pessoas jogam em todo o mundo. Neste problema de design, vamos nos concentrar em projetar um jogo de xadrez online para dois jogadores.
 
