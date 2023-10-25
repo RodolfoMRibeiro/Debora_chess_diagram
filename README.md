@@ -1,7 +1,7 @@
 <h1 align="center">Design Chess</h1>
-<h3 align="center">Let's design a system to play chess</h3>
+<h3 align="center">Vamos modelar um sistema para jogar xadrez</h3>
 
-**We'll cover the following:**
+**Nós iremos tratar o seguinte:**
 
 * [System Requirements](#system-requirements)
 * [Use Case Diagram](#use-case-diagram)
@@ -9,7 +9,7 @@
 * [Activity Diagram](#activity-diagram)
 * [Code](#code)
 
-Chess is a two-player strategy board game played on a chessboard, which is a checkered gameboard with 64 squares arranged in an 8×8 grid. There are a few versions of game types that people play all over the world. In this design problem, we are going to focus on designing a two-player online chess game.
+O xadrez é um jogo de tabuleiro estratégico para dois jogadores jogado em um tabuleiro de xadrez, que é um tabuleiro quadriculado com 64 casas dispostas em uma grade de 8x8. Existem algumas versões de tipos de jogos que as pessoas jogam em todo o mundo. Neste problema de design, vamos nos concentrar em projetar um jogo de xadrez online para dois jogadores.
 
 <p align="center">
     <img src="/media-files/chess.png" alt="Chess">
@@ -17,82 +17,82 @@ Chess is a two-player strategy board game played on a chessboard, which is a che
     Chess
 </p>
 
-### System Requirements
+### Requerimentos do Sistema
 
-We’ll focus on the following set of requirements while designing the game of chess:
+Nós vamos focar no seguinte conjunto de requerimentos enquanto fazemos o design do jogo de xadres:
 
-1. The system should support two online players to play a game of chess.
-2. All rules of international chess will be followed.
-3. Each player will be randomly assigned a side, black or white.
-4. Both players will play their moves one after the other. The white side plays the first move.
-5. Players can’t cancel or roll back their moves.
-6. The system should maintain a log of all moves by both players.
-7. Each side will start with 8 pawns, 2 rooks, 2 bishops, 2 knights, 1 queen, and 1 king.
-8. The game can finish either in a checkmate from one side, forfeit or stalemate (a draw), or resignation.
+1. O sistema deve suportar dois jogadores online para jogar uma partida de xadrez.
+2. Todas as regras do xadrez internacional serão seguidas.
+3. Cada jogador será atribuído aleatoriamente a um lado, preto ou branco.
+4. Ambos os jogadores farão seus movimentos um após o outro. O lado branco faz o primeiro movimento.
+5. Os jogadores não podem cancelar ou desfazer seus movimentos.
+6. O sistema deve manter um registro de todos os movimentos de ambos os jogadores.
+7. Cada lado começará com 8 peões, 2 torres, 2 bispos, 2 cavalos, 1 rainha e 1 rei.
+8. O jogo pode terminar com um xeque-mate de um lado, desistência, empate ou estaleiro.
 
-### Use Case Diagram
+### Diagrama de Caso de Uso
 
-We have two actors in our system:
+Nós temos dois atores em nosso sistema:
 
-* **Player:** A registered account in the system, who will play the game. The player will play chess moves.
-* **Admin:** To ban/modify players.
+* **Player:** Uma conta registrada no sistema, para jogar o jogo. O Jogador irá realizar os movimentos
+* **Admin:** Banir/Modificar jogadores.
 
-Here are the top use cases for chess:
+Aqui estão os principais casos de uso para o xadrez:
 
-* **Player moves a piece:** To make a valid move of any chess piece.
-* **Resign or forfeit a game:** A player resigns from/forfeits the game.
-* **Register new account/Cancel membership:** To add a new member or cancel an existing member.
-* **Update game log:** To add a move to the game log.
+* **Jogador move uma peça:** Para fazer um movimento válido de qualquer peça de xadrez.
+* **Resignar ou desistir de um jogo:** Um jogador se resigna ou desiste do jogo.
+* **Registrar nova conta/Cancelar membro:** Para adicionar um novo membro ou cancelar a associação de um membro existente.
+* **Atualizar o registro de jogo:** Para adicionar um movimento ao registro de jogo.
 
-Here is the use case diagram of our Chess Game:
+Aqui está o diagrama de casos de uso do nosso Jogo de Xadrez:
 
 <p align="center">
     <img src="/media-files/chess-use-case-diagram.png" alt="Chess Use Case Diagram">
     <br />
-    Use Case Diagram for Chess
+    Diagrama de Caso de Uso sobre o Xadrez
 </p>
 
-### Class Diagram
+### Diagrama de Classe
 
-Here are the main classes for chess:
+Aqui estão as principais classes para o xadrez:
 
-**Player:** Player class represents one of the participants playing the game. It keeps track of which side (black or white) the player is playing.<br />
-**Account:** We’ll have two types of accounts in the system: one will be a player, and the other will be an admin.<br />
-**Game:** This class controls the flow of a game. It keeps track of all the game moves, which player has the current turn, and the final result of the game.<br />
-**Box:** A box represents one block of the 8x8 grid and an optional piece.<br />
-**Board:** Board is an 8x8 set of boxes containing all active chess pieces.<br />
-**Piece:** The basic building block of the system, every piece will be placed on a box. This class contains the color the piece represents and the status of the piece (that is, if the piece is currently in play or not). This would be an abstract class and all game pieces will extend it.<br />
-**Move:** Represents a game move, containing the starting and ending box. The Move class will also keep track of the player who made the move, if it is a castling move, or if the move resulted in the capture of a piece.<br />
-**GameController:** Player class uses GameController to make moves.<br />
-**GameView:** Game class updates the GameView to show changes to the players.<br />
+**Jogador:** A classe Jogador representa um dos participantes que jogam o jogo. Ela mantém o controle de qual lado (preto ou branco) o jogador está jogando.<br />
+**Conta:** Teremos dois tipos de contas no sistema: um será um jogador e o outro será um administrador.<br />
+**Jogo:** Esta classe controla o fluxo de um jogo. Ela mantém o controle de todos os movimentos do jogo, qual jogador tem a vez atual e o resultado final do jogo.<br />
+**Caixa:** Uma caixa representa um bloco da grade 8x8 e uma peça opcional.<br />
+**Tabuleiro:** O tabuleiro é um conjunto de caixas 8x8 contendo todas as peças de xadrez ativas.<br />
+**Peça:** O bloco de construção básico do sistema, cada peça será colocada em uma caixa. Esta classe contém a cor que a peça representa e o status da peça (ou seja, se a peça está atualmente em jogo ou não). Esta seria uma classe abstrata e todas as peças do jogo a estenderão.<br />
+**Movimento:** Representa um movimento no jogo, contendo a caixa de início e a caixa de destino. A classe Movimento também manterá o controle do jogador que fez o movimento, se for um movimento de roque, ou se o movimento resultou na captura de uma peça.<br />
+**ControladorDeJogo:** A classe Jogador usa o ControladorDeJogo para fazer movimentos.<br />
+**VisualizaçãoDeJogo:** A classe Jogo atualiza a VisualizaçãoDeJogo para mostrar as alterações aos jogadores.<br />
 
 <p align="center">
     <img src="/media-files/chess-class-diagram.png" alt="Chess Class Diagram">
     <br />
-    Class Diagram for Chess
+    Diagrama de Classe sobre o Xadrez
 </p>
 
 <p align="center">
     <img src="/media-files/chess-uml.svg" alt="Chess UML">
     <br />
-    UML for Chess
+    UML sobre o Xadrez
 </p>
 
-### Activity Diagram
+### Diagrama de Atividades
 
-**Make move:** Any Player can perform this activity. Here are the set of steps to make a move:
+**Realizar um movimento:** Qualquer jogador pode executar esta atividade. Aqui estão o conjunto de etapas para realizar um movimento:
 
 <p align="center">
     <img src="/media-files/chess-activity-diagram.svg" alt="Chess Activity Diagram">
     <br />
-    Activity Diagram for Chess
+    Diagrama de Atividade sobre o Xadrez
 </p>
 
-### Code
+### Codigo
 
-Here is the code for the top use cases.
+Aqui está o código para os principais casos de uso.
 
-**Enums, DataTypes, Constants:** Here are the required enums, data types, and constants:
+**Enums, Tipos de Dados, Constantes:** Aqui estão os enums, tipos de dados e constantes necessários:
 
 ```python
 class PieceType:
@@ -127,7 +127,7 @@ INITIAL_PIECE_SET_SINGLE = [
 
 ```
 
-**Board:** To encapsulate a cell on the chess board:
+**Board:** Encapsular as casas do tabuleiro de xadrez:
 
 ```python
 from copy import deepcopy
@@ -234,7 +234,7 @@ class ChessBoard:
 
 ```
 
-**Piece:** An abstract class to encapsulate common functionality of all chess pieces:
+**Piece:** Um Classe abstrata para encapsular funcionalidades comuns de todas as peças de xadrez:
 
 ```python
 from abc import ABC
@@ -309,7 +309,7 @@ class PieceFactory:
             return Pawn(position, color)
 ```
 
-**King:** To encapsulate King as a chess piece:
+**King:** Encapsular o Rei como uma peça de xadrez:
 
 ```python
 from .pieces import Piece
@@ -346,7 +346,7 @@ class King(Piece):
 
 ```
 
-**Queen:** To encapsulate Queen as a chess piece:
+**Queen:** Encapsular uma Rainha como peça de Xadrez:
 
 ```python
 from .pieces import Piece
@@ -369,7 +369,7 @@ class Queen(Piece):
 
 ```
 
-**Knight:** To encapsulate Knight as a chess piece:
+**Knight:** Encapsular Cavaleiro como peça de Xadrez:
 
 ```python
 from .pieces import Piece
@@ -393,7 +393,7 @@ class Knight(Piece):
 
 ```
 
-**Rook:** To encapsulate Rook as a chess piece:
+**Rook:** Encapsular Torre como peça de Xadrez:
 
 ```python
 from .pieces import Piece
@@ -416,7 +416,7 @@ class Rook(Piece):
 
 ```
 
-**Bishop:** To encapsulate Bishop as a chess piece:
+**Bishop:** Encapsular Bispo como peça de Xadrez:
 
 ```python
 from .pieces import Piece
@@ -439,7 +439,7 @@ class Bishop(Piece):
 
 ```
 
-**Pawn:** To encapsulate Pawn as a chess piece:
+**Pawn:** Encapsular Peão como peça de Xadrez:
 
 ```python
 from .pieces import Piece
@@ -489,7 +489,7 @@ class Pawn(Piece):
 
 
 
-**Move:** To encapsulate a chess move:
+**Move:** Encapsular um movimento de Xadrez:
 
 ```python
 class ChessPosition:
@@ -526,7 +526,7 @@ class MoveCommand:
 
 ```
 
-**Game:** To encapsulate a chess game:
+**Game:** Encapsular o jogo de Xadrez em si:
 
 ```python
 from copy import deepcopy
@@ -602,7 +602,7 @@ class ChessGame:
 
 ```
 
-**Render:** To encapsulate a chess render:
+**Render:** Encapsular a Renderezição do jogo:
 
 ```python
 from .moves import ChessPosition
@@ -658,7 +658,7 @@ class ConsoleRender(InputRender):
 
 ```
 
-**Player:** To encapsulate a chess player:
+**Player:** Encapsular o Jogador de Xadrez:
 
 ```python
 from .render import ConsoleRender
