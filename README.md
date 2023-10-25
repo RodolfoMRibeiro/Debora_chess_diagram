@@ -17,7 +17,7 @@ O xadrez é um jogo de tabuleiro estratégico para dois jogadores jogado em um t
     Chess
 </p>
 
-### Requerimentos do Sistema
+## Requerimentos do Sistema
 
 Nós vamos focar no seguinte conjunto de requerimentos enquanto fazemos o design do jogo de xadres:
 
@@ -30,7 +30,7 @@ Nós vamos focar no seguinte conjunto de requerimentos enquanto fazemos o design
 7. Cada lado começará com 8 peões, 2 torres, 2 bispos, 2 cavalos, 1 rainha e 1 rei.
 8. O jogo pode terminar com um xeque-mate de um lado, desistência, empate ou estaleiro.
 
-### Diagrama de Caso de Uso
+## Diagrama de Caso de Uso
 
 Nós temos dois atores em nosso sistema:
 
@@ -52,7 +52,7 @@ Aqui está o diagrama de casos de uso do nosso Jogo de Xadrez:
     Diagrama de Caso de Uso sobre o Xadrez
 </p>
 
-### Diagrama de Classe
+## Diagrama de Classe
 
 Aqui estão as principais classes para o xadrez:
 
@@ -78,7 +78,7 @@ Aqui estão as principais classes para o xadrez:
     UML sobre o Xadrez
 </p>
 
-### Diagrama de Atividades
+## Diagrama de Atividades
 
 **Realizar um movimento:** Qualquer jogador pode executar esta atividade. Aqui estão o conjunto de etapas para realizar um movimento:
 
@@ -88,7 +88,7 @@ Aqui estão as principais classes para o xadrez:
     Diagrama de Atividade sobre o Xadrez
 </p>
 
-### Codigo
+## Codigo
 
 Aqui está o código para os principais casos de uso.
 
