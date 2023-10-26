@@ -14,7 +14,7 @@ O xadrez é um jogo de tabuleiro estratégico para dois jogadores jogado em um t
 <p align="center">
     <img src="/media-files/chess.png" alt="Chess">
     <br />
-    Chess
+    Figura 1: ilustração de um tabuleiro de chadrez.
 </p>
 
 ## Requerimentos do Sistema
@@ -49,7 +49,7 @@ Aqui está o diagrama de casos de uso do nosso Jogo de Xadrez:
 <p align="center">
     <img src="/media-files/chess-use-case-diagram.png" alt="Chess Use Case Diagram">
     <br />
-    Diagrama de Caso de Uso sobre o Xadrez
+    Figura 2: Diagrama de Caso de Uso sobre o Xadrez
 </p>
 
 ## Diagrama de Classe
@@ -69,13 +69,13 @@ Aqui estão as principais classes para o xadrez:
 <p align="center">
     <img src="/media-files/chess-class-diagram.png" alt="Chess Class Diagram">
     <br />
-    Diagrama de Classe sobre o Xadrez
+    Figura 3: Diagrama de Classe sobre o Xadrez
 </p>
 
 <p align="center">
     <img src="/media-files/chess-uml.svg" alt="Chess UML">
     <br />
-    UML sobre o Xadrez
+    Figura 4: UML sobre o Xadrez
 </p>
 
 ## Diagrama de Atividades
@@ -85,7 +85,7 @@ Aqui estão as principais classes para o xadrez:
 <p align="center">
     <img src="/media-files/chess-activity-diagram.svg" alt="Chess Activity Diagram">
     <br />
-    Diagrama de Atividade sobre o Xadrez
+    Figura 5: Diagrama de Atividade sobre o Xadrez
 </p>
 
 ## Codigo
@@ -684,5 +684,10 @@ if __name__ == "__main__":
 
 ```
 CHESS. Termos de Xadrez. "Chess.com".
-Disponível em: https://www.chess.com/pt-BR/terms/guia-dicas-xadrez-para-iniciantes. Acesso em: 26 de outubro de 2023.
+Disponível em: https://www.chess.com/pt-BR/terms/guia-dicas-xadrez-para-iniciantes. Acesso em: 21 de outubro de 2023.
+```
+
+```
+DRIBBLE. Chess NIX. "Dribbble.com". Disponível em: https://dribbble.com/shots/4005966-Chess.
+Acesso em: 20 de outubro de 2023.
 ```
