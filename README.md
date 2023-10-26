@@ -677,3 +677,12 @@ if __name__ == "__main__":
     player.play_chess()
 
 ```
+
+
+<hr>
+<h3 align="center">Referências</h3>
+
+```
+CHESS. Termos de Xadrez. "Chess.com".
+Disponível em: https://www.chess.com/pt-BR/terms/guia-dicas-xadrez-para-iniciantes. Acesso em: 26 de outubro de 2023.
+```
